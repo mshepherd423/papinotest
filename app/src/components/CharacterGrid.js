@@ -5,9 +5,9 @@ import detailsIconSrc from '../res/images/icon_detail.png';
 
 class CharacterGrid extends React.Component {
     render() {
-        let favIcon1 = <img src={favIconSrc} />;
-        let favIcon2 = <img src={favIcon2Src} />;
-        let detailsIcon = <img src={detailsIconSrc} />;
+        let favIcon1 = <img src={favIconSrc} title={'Add favorite'}/>;
+        let favIcon2 = <img src={favIcon2Src} title={'Delete favorite'} />;
+        let detailsIcon = <img src={detailsIconSrc} title={'Show details'}/>;
         const { rows, showFavs, addFav, showDetails, searchKey } = this.props;
         return(
             //<table style={{ display: 'block', overflowY: 'auto', height: '400px', width: 'max-content' }}>

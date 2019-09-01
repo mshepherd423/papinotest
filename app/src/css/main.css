@@ -5,6 +5,7 @@ body {
 .columnName {
     font-weight: bold;
     border-bottom: 1px solid;
+    margin-bottom: 5px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -59,7 +60,7 @@ body {
         margin: 5px;
     }
 
-    .characterGrid > thead > td{
+    .characterGrid > tbody {
         display: block;
         min-width: 200px;
         overflow-y: auto;
@@ -146,7 +147,7 @@ body {
         margin: 5px;
     }
 
-    .characterGrid > thead > td{
+    .characterGrid > tbody {
         display: block;
         min-width: 200px;
         overflow-y: auto;
@@ -229,7 +230,7 @@ body {
         margin: 5px;
     }
 
-    .characterGrid {
+    .characterGrid tbody {
         display: block;
         min-width: 200px;
         overflow-y: auto;
