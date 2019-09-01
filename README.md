@@ -1,4 +1,4 @@
-# papinotas 
+# papinotest
 Test web app using ReactJS, GraphQL and PostCSS
 
 # INSTALL
