@@ -5,6 +5,8 @@ import MenuTabs from "../components/MenuTabs";
 import CharacterInfo from "../components/CharacterInfo";
 import SearchInput from "../components/SearchInput";
 
+import '../css/dest/main.css';
+
 class Main extends React.Component{
     constructor(props) {
         super(props);
@@ -89,17 +91,21 @@ class Main extends React.Component{
     render(){
         const { characters, showFavs, selected, searchKey } = this.state;
         if (characters.length > 0) {
-            return <div>
-                <MenuTabs onTabSelected={this.onTabSelected.bind(this)} />
-                <SearchInput handleInput={this.handleInput.bind(this)} />
-                <CharacterGrid
-                    rows={characters}
-                    showFavs={showFavs}
-                    addFav={this.addFav.bind(this)}
-                    showDetails={this.showDetails.bind(this)}
-                    searchKey={searchKey}
-                />
-                <CharacterInfo data={characters[selected]} />
+            return <div className={'main'}>
+                <div className={'mainCol1'}>
+                    <MenuTabs onTabSelected={this.onTabSelected.bind(this)} />
+                    <SearchInput handleInput={this.handleInput.bind(this)} />
+                    <CharacterGrid
+                        rows={characters}
+                        showFavs={showFavs}
+                        addFav={this.addFav.bind(this)}
+                        showDetails={this.showDetails.bind(this)}
+                        searchKey={searchKey}
+                    />
+                </div>
+                <div className={'mainCol2'}>
+                    <CharacterInfo data={characters[selected]} />
+                </div>
             </div>
         }
         return <Loading />

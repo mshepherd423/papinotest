@@ -5,9 +5,10 @@ class CharacterInfo extends React.Component {
         if (this.props.data) {
             const { name = '-', homeworld, species = [], films = [], starships = []} = this.props.data;
             return (
-                <div style={{ position: 'absolute', right: 0, top: 0, width: 600, height: 800 }}>
-                    <div style={{ display: 'flex'}}><label>{name}</label></div>
-                    <div style={{ display: 'flex' }}>
+                // <div style={{ position: 'absolute', right: 0, top: 0, width: 600, height: 800 }}>
+                <div className={'characterInfo'}>
+                    <div className={'charInfoCell title'}><label>{name}</label></div>
+                    <div className={'charInfoCell'}>
                         <div>
                             <label>Homeworld</label>
                             <ul><li>{ homeworld === null ? 'Unknown' : homeworld.name }</li></ul>
@@ -23,7 +24,7 @@ class CharacterInfo extends React.Component {
                                 }) : <li>Unknown</li>
                         }</ul></div>
                     </div>
-                    <div style={{ display: 'flex' }}>
+                    <div className={'charInfoCell'}>
                         <div>
                             <label>Starships</label>
                             <ul>{

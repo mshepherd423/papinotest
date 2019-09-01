@@ -4,9 +4,9 @@ class MenuTabs extends React.Component {
     render() {
         const { onTabSelected } = this.props;
         return (
-            <div>
-                <button onClick={() => onTabSelected(false)}>Characters List</button>
-                <button onClick={() => onTabSelected(true)}>Favorites List</button>
+            <div className={'menuTabs'}>
+                <button className={'tabButton'} onClick={() => onTabSelected(false)}>Characters List</button>
+                <button className={'tabButton'} onClick={() => onTabSelected(true)}>Favorites List</button>
             </div>
         )
     }
