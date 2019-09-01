@@ -14,7 +14,7 @@ class CharacterGrid extends React.Component {
             <table className={'characterGrid'}>
                 <thead>
                     <tr>
-                        <td>Names</td>
+                        <td className={'columnName'}>Names</td>
                     </tr>
                 </thead>
                 <tbody>
